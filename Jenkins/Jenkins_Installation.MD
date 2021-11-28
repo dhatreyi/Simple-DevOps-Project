@@ -7,9 +7,16 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 1. EC2 Instance 
    - With Internet Access
    - Security Group with Port `8080` open for internet
-1. Java 11 should be installed  
-
-
+2. Java 8 or 11 are compatible. Either of those versions can be installed.  
+   yum install java-1.8* -y    ---> Installs the required version of Java
+   java -version   ---> checks the installed version of java
+   find /usr/lib/jvm/java-1.8* | head -n 3  ---> Shows path of the jvm/java file is available
+   vi .bash_profile ---> edit .bash_profile to update the jre path in it. Use below 2 steps to do it. (Note: This cmd should be executed from the root directory)
+   JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.302.b08-0.amzn2.0.1.x86_64 ---> identifies the where jre is present
+   PATH=$PATH:$HOME/bin:$JAVA_HOME ---> sets the java path >>> Next save the .bash_profile
+   Logoff and log back in for the changes to reflect
+   echo $JAVA_HOME
+   
 ## Install Jenkins
  You can install jenkins using the rpm or by setting up the repo. We will set up the repo so that we can update it easily in the future.
 1. Get the latest version of jenkins from https://pkg.jenkins.io/redhat-stable/ and install
