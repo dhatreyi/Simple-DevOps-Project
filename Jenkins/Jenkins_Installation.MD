@@ -51,6 +51,8 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    ### Changing the port for Jenkins from 8080 to 80
    
    sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+   
+   
    sudo sh -c "iptables-save > /etc/iptables.rules"
 
    
