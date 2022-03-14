@@ -85,7 +85,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 
 1. STEP2:
 
-   Edit the file sudoers with : jenkins ALL=(ALL) NOPASSWD=ALL
+   Edit the file sudoers with : jenkins ALL=(ALL) NOPASSWD:ALL
 
 1. STEP3:
 
