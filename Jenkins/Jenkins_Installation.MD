@@ -76,3 +76,17 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 1. Save your job 
 1. Build job
 1. Check "console output"
+
+### ISSUE "sudo: no tty present and no askpass program specified" 
+
+1. STEP1: 
+
+   sudo visudo -f /etc/sudoers
+
+1. STEP2:
+
+   Edit the file sudoers with : jenkins ALL=(ALL) NOPASSWD=ALL
+
+1. STEP3:
+
+   service jenkins restart
